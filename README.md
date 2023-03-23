@@ -11,11 +11,15 @@ De menor a mayor estarían ordenados de la siguiente manera:
 - !important = 10000
 
   - Ejemplo:
-  <!-- <h1 class="title" id="titulo" style="color:green">CSS</h1> -->
+
+  ```
+  <h1 class="title" id="titulo" style="color:green">CSS</h1>
+  ```
 
   En la hoja styles.css:
 
-  asterisco {
+```
+  * {
   color: brown;
   }
 
@@ -30,12 +34,13 @@ De menor a mayor estarían ordenados de la siguiente manera:
   #titulo {
   color: red;
   }
+```
 
-  En este ejemplo el texto se mostrará "naranja", porque lleva el atributo "!important", en caso no esté esto se mostraría de color verde, de forma similar luego sería rojo, seguido naranja, azul y finalmente marrón en caso todos los demás no estén. En conclusión se cumple la jerarquía: !important > inline > #id > .clase > etiqueta > asterisco.
+En este ejemplo el texto se mostrará "naranja", porque lleva el atributo "!important", en caso no esté esto se mostraría de color verde, de forma similar luego sería rojo, seguido naranja, azul y finalmente marrón en caso todos los demás no estén. En conclusión se cumple la jerarquía: !important > inline > #id > .clase > etiqueta > asterisco.
 
-  **Recomendación:** evitar el uso de !important, salvo se necesite en declaraciones específicas de CSS que sobrescriban CSS externo.
+**Recomendación:** evitar el uso de !important, salvo se necesite en declaraciones específicas de CSS que sobrescriban CSS externo.
 
-  _Fuente:_ (https://developer.mozilla.org/es/docs/Web/CSS/Specificity)
+_Fuente:_ (https://developer.mozilla.org/es/docs/Web/CSS/Specificity)
 
 **Selectores:** definen sobre qué elementos se aplicará un conjunto de reglas CSS.
 Según la MDN se tienen los siguientes selectores:
@@ -65,12 +70,14 @@ Según la MDN se tienen los siguientes selectores:
 **Cascada:** se aplica cuando dos reglas tienen la misma especificidad, se aplica la que aparece en último lugar en el CSS.
 
 - Ejemplo: a continuación se muestra dos selectores de etiqueta "h1" con el atributo color distinto en cada uno, el resultado será azul porque es la última que aparece.
+  ```
   h1 {
   color: red;
   }
   h1 {
   color: blue;
   }
+  ```
 
 **Herencia:** algunos valores de las propiedades CSS que se han establecido para los elementos padre los heredan los elementos hijo, pero otros no.
 
