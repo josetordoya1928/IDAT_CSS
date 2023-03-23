@@ -11,9 +11,9 @@ De menor a mayor estarían ordenados de la siguiente manera:
 - !important = 10000
 
   - Ejemplo:
-  <h1 class="title" id="titulo" style="color:green">CSS</h1>
+  <!-- <h1 class="title" id="titulo" style="color:green">CSS</h1> -->
 
-  En la hora styles.css:
+  En la hoja styles.css:
 
   asterisco {
   color: brown;
@@ -34,6 +34,7 @@ De menor a mayor estarían ordenados de la siguiente manera:
   En este ejemplo el texto se mostrará "naranja", porque lleva el atributo "!important", en caso no esté esto se mostraría de color verde, de forma similar luego sería rojo, seguido naranja, azul y finalmente marrón en caso todos los demás no estén. En conclusión se cumple la jerarquía: !important > inline > #id > .clase > etiqueta > asterisco.
 
   **Recomendación:** evitar el uso de !important, salvo se necesite en declaraciones específicas de CSS que sobrescriban CSS externo.
+
   _Fuente:_ (https://developer.mozilla.org/es/docs/Web/CSS/Specificity)
 
 **Selectores:** definen sobre qué elementos se aplicará un conjunto de reglas CSS.
@@ -56,8 +57,10 @@ Según la MDN se tienen los siguientes selectores:
   - Ejemplo: "asterisco" se aplicará a todos los elementos del documento.
 
 - Selector de atributo: sintaxis ([attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value])
+
   - Ejemplo: [autoplay] seleccionará todos los elementos que tengan el atributo "autoplay" establecido (a cualquier valor).
-    _Fuente:_ (https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
+
+  _Fuente:_ (https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
 
 **Cascada:** se aplica cuando dos reglas tienen la misma especificidad, se aplica la que aparece en último lugar en el CSS.
 
@@ -74,4 +77,5 @@ Según la MDN se tienen los siguientes selectores:
 - Ejemplo: si para un elemento se establece el color (color) y el tipo de letra (font-family), cada elemento que se encuentre dentro de él también se mostrará de ese color y con ese tipo de letra, salvo se haya aplicado un color y un tipo de letra diferentes directamente.
 
 **Observación**: Algunas propiedades no se heredan. Por ejemplo, si para un elemento se establece un ancho width del 50%, sus descendientes no tendrán un 50% de ancho con respecto al de sus padres. Si este fuera el caso, ¡sería muy frustrante usar CSS!
+
 _Fuente:_ (https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
